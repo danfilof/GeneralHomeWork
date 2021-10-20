@@ -7,9 +7,8 @@ public class GeneralHomeWork  {
     public static void main(String[] args)  {
     oneToZero();
     oneToHundred();
-    timestwo();
-
-
+    timesTwo();
+    diagonAlley();
 
 
 
@@ -46,7 +45,7 @@ public class GeneralHomeWork  {
     }
 
 
-    public static void timestwo () {
+    public static void timesTwo () {
 
         int [] arr02 = new int[] {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 };
 
@@ -59,5 +58,25 @@ public class GeneralHomeWork  {
         }
         System.out.println(Arrays.toString(arr02));
     }
+
+public static void diagonAlley() {
+
+int [] [] arr03 = new int [6] [6];
+
+for (int i  = 0; i < 6; i++) {
+
+    for (int j = 0; j < 6; j++) {
+
+        if (i == j) {
+
+            arr03[i][j] = 1;
+
+        }
+        System.out.printf("%2d" , arr03[i][j]);
+    }
+System.out.println();
+}
+
+}
 }
 
