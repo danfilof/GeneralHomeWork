@@ -11,70 +11,71 @@ public class GeneralHomeWork {
         diagonAlley();
         twoArguements(10, 25);
         findTheStandingValue();
-        checkBalance();
+        checkBalance(new int [] { 2, 2, 2, 1, 2, 5, 3, 1});
+
+        }
 
 
-    }
 
     public static void oneToZero() {
 
-        int[] arr = new int[]{1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
+        int[] arr = new int[]{1, 1, 0, 0, 1, 0, 1, 1, 0, 0}; // Объявляю массив
 
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) { //  запускается цикл, где i=0 и каждую итерацию значение i увеличивается на 1;
 
-            if (arr[i] == 0) {
+            if (arr[i] == 0) {   // Если значение в массиве равно 0, переписать его на 1;
 
                 arr[i] = 1;
 
-            } else {
+            } else { // В иных случаях - значение равно 0;
 
                 arr[i] = 0;
             }
 
         }
-        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arr)); // По условию задания прописывать в консоль получившийся массив не нужно. Сделал это исключительно для себя, для наглядности;
     }
 
     public static void oneToHundred() {
 
-        int[] arr01 = new int[101];
+        int[] arr01 = new int[101]; // Объявляю массив,  в которорм 101-но значение;
 
-        for (int i = 0; i < arr01.length; i++) {
+        for (int i = 0; i < arr01.length; i++) { //  запускается цикл, где i=0 и каждую итерацию значение i увеличивается на 1;
 
             arr01[i] = i;
         }
-        System.out.println(Arrays.toString(arr01));
+        System.out.println(Arrays.toString(arr01)); // По условию задания прописывать в консоль получившийся массив не нужно. Сделал это исключительно для себя, для наглядности;
     }
 
 
     public static void timesTwo() {
 
-        int[] arr02 = new int[]{1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        int[] arr02 = new int[]{1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1}; // Объявляю массив
 
-        for (int i = 0; i < arr02.length; i++) {
+        for (int i = 0; i < arr02.length; i++) { //  запускается цикл, где i=0 и каждую итерацию значение i увеличивается на 1;
 
-            if (arr02[i] < 6) {
+            if (arr02[i] < 6) { // Если значение в массиве меньше 6, умножить значение на 2;
 
                 arr02[i] = arr02[i] * 2;
             }
         }
-        System.out.println(Arrays.toString(arr02));
+        System.out.println(Arrays.toString(arr02)); // По условию задания прописывать в консоль получившийся массив не нужно. Сделал это исключительно для себя, для наглядности;
     }
 
     public static void diagonAlley() {
 
-        int[][] arr03 = new int[6][6];
+        int[][] arr03 = new int[6][6]; // Объявляю двумерный массив, где количество строк равно количеству столбцов;
 
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 6; i++) { // запускается цикл, который проходит по строкам;
 
-            for (int j = 0; j < 6; j++) {
+            for (int j = 0; j < 6; j++) { // Запускается цикл внутри цикла, который уже проходит по столбцам;
 
-                if (i == j) {
+                if (i == j) { // Если значение строки и столбца совпадают, переписать значение этой ячейки на 1;
 
                     arr03[i][j] = 1;
 
                 }
-                System.out.printf("%2d", arr03[i][j]);
+                System.out.printf("%2d", arr03[i][j]);  // По условию задания прописывать в консоль получившийся массив не нужно. Сделал это исключительно для себя, для наглядности;
             }
             System.out.println();
         }
@@ -83,7 +84,7 @@ public class GeneralHomeWork {
 
     public static int[] twoArguements(int len, int initialValue) {
 
-        int[] arr04 = new int[len];
+        int[] arr04 = new int[len]; // Объявляю массив, где len - количество ячеек;
 
         for (int i = 0; i < arr04.length; i++) {
 
@@ -91,8 +92,8 @@ public class GeneralHomeWork {
 
         }
 
-        System.out.println(Arrays.toString(arr04));
-        return arr04;
+        System.out.println(Arrays.toString(arr04)); // По условию задания прописывать в консоль получившийся массив не нужно. Сделал это исключительно для себя, для наглядности;
+        return arr04; // Вернуть массив;
     }
 
 
@@ -101,64 +102,64 @@ public class GeneralHomeWork {
         int [] arr05 = new int[] { 6, 96, 11, 9, 4, 2, 3, 5, 101, 8, 101, 105, 11, 103};
 
 
-        int maxValue = 0;
-      for (int i = 0; i < arr05.length; i++) {
+        int maxValue = 0; // Ввожу переменную maxValue и приравниваю ее к нулю;
+      for (int i = 0; i < arr05.length; i++) {  //  запускается цикл, где i=0 и каждую итерацию значение i увеличивается на 1;
 
-          if ( arr05[i] > maxValue) {
+          if ( arr05[i] > maxValue) { // Если значение в массиве больше, чем переменная, переписать значение maxValue на значение в массиве;
 
               maxValue = arr05[i];
 
-          } else {
+          } else { // В противном случае - проигнорировать;
 
               continue;
           }
 
         }
-      int minValue = maxValue;
+      int minValue = maxValue; // Ввожу переменную minValue и приравниваю ее к переменной maxValue, где хранится наибольшее значение в массиве;
       for (int j = 0; j < arr05.length; j++) {
 
-          if (minValue > arr05[j]) {
+          if (minValue > arr05[j]) { // Если значение переменной больше, чем значение в массиве, переписать значение minValue на значение в массиве;
 
               minValue = arr05[j];
 
-          } else {
+          } else { // В противном случае - проигнорировать;
 
               continue;
           }
 
       }
 
-        System.out.println("Наибольшее значение: " + maxValue + " ; " + "Наименьшее значение: " + minValue);
+        System.out.println("Наибольшее значение: " + maxValue + " ; " + "Наименьшее значение: " + minValue); // По условию задания прописывать в консоль получившийся массив не нужно. Сделал это исключительно для себя, для наглядности;
     }
 
 
 
-    public static boolean checkBalance () {
+    public static boolean checkBalance ( int[] bBalance) {
 
-        int [] bBalance =new int [] { 2, 2, 2, 1, 2, 5, 3, 1};
 
-        int sumOfArrays = 0;
+        int sumOfArrays = 0; // Ввожу переменную, обозначающюю сумму всех чисел в массиве, нахожу это значение;
         for (int j = 0; j < bBalance.length; j++) {
-           sumOfArrays = sumOfArrays + bBalance[j];
+           sumOfArrays += bBalance[j];
 
         }
 
-        int a = 0;
+        int a = 0; // Ввожу переменную а, которая равно 0;
         for (int i = 0; i < bBalance.length; i++) {
 
-            a = a + bBalance[i];
+            a = a + bBalance[i]; // Запускаю цикл, где каждую итерацию значение увеличивается, в зависимости от значений в массиве;
 
 
-            if (a == sumOfArrays - a) {
+            if (a == sumOfArrays - a) { // Если сумма слева равна этой же сумме, только вычтеной из суммы всех чисел в массиве, вернуть значение true;
 
-                System.out.println("Значение в левой части равно значению в правой части");
+                System.out.println("Значение в левой части равно значению в правой части"); // По условию задания прописывать в консоль получившийся массив не нужно. Сделал это исключительно для себя, для наглядности;
                 return true;
             }
 
             }
-        System.out.println("Неудача");
+        System.out.println("Неудача"); //В том случае, если условие не выполняется, возвращаем false и для наглядности сообщаем об этом в консоли;
             return false;
             }
+
 
 }
 
