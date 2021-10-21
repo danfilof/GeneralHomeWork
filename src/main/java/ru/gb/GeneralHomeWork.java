@@ -10,6 +10,7 @@ public class GeneralHomeWork {
         timesTwo();
         diagonAlley();
         twoArguements(10, 25);
+        findTheStandingValue();
 
 
     }
@@ -91,6 +92,36 @@ public class GeneralHomeWork {
 
         System.out.println(Arrays.toString(arr04));
         return arr04;
+    }
+
+
+    public static void findTheStandingValue() {
+
+        int [] arr05 = new int[] { 6, 96, 11, 9, 4, 2, 3, 5, 101, 8, 101, 105, 11, 103};
+
+
+        int maxValue = 0;
+      for (int i = 0; i < arr05.length; i++) {
+
+          if ( arr05[i] > maxValue) {
+
+              maxValue = arr05[i];
+
+          }
+
+        }
+      int minValue = maxValue;
+      for (int j = 0; j < arr05.length; j++) {
+
+          if (minValue > arr05[j]) {
+
+              minValue = arr05[j];
+
+          }
+
+      }
+
+        System.out.println("Наибольшее значение: " + maxValue + " ; " + "Наименьшее значение: " + minValue);
     }
 
 }
