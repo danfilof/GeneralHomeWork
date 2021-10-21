@@ -11,6 +11,7 @@ public class GeneralHomeWork {
         diagonAlley();
         twoArguements(10, 25);
         findTheStandingValue();
+        checkBalance();
 
 
     }
@@ -107,6 +108,9 @@ public class GeneralHomeWork {
 
               maxValue = arr05[i];
 
+          } else {
+
+              continue;
           }
 
         }
@@ -117,12 +121,44 @@ public class GeneralHomeWork {
 
               minValue = arr05[j];
 
+          } else {
+
+              continue;
           }
 
       }
 
         System.out.println("Наибольшее значение: " + maxValue + " ; " + "Наименьшее значение: " + minValue);
     }
+
+
+
+    public static boolean checkBalance () {
+
+        int [] bBalance =new int [] { 2, 2, 2, 1, 2, 5, 3, 1};
+
+        int sumOfArrays = 0;
+        for (int j = 0; j < bBalance.length; j++) {
+           sumOfArrays = sumOfArrays + bBalance[j];
+
+        }
+
+        int a = 0;
+        for (int i = 0; i < bBalance.length; i++) {
+
+            a = a + bBalance[i];
+
+
+            if (a == sumOfArrays - a) {
+
+                System.out.println("Значение в левой части равно значению в правой части");
+                return true;
+            }
+
+            }
+        System.out.println("Неудача");
+            return false;
+            }
 
 }
 
