@@ -56,6 +56,31 @@ import java.util.Scanner;
             if (map[0][0] == symb && map[1][1] == symb && map[2][2] == symb) return true;
             if (map[2][0] == symb && map[1][1] == symb && map[0][2] == symb) return true;
             return false;
+
+            /*
+            for (int i = 0; i < SIZE; i++) {
+
+                for (int j = 0; j < SIZE; j++) {
+
+                   if (map[i][j] == DOT_X) return true;
+
+                   if (map[i][SIZE + 1 - j] == DOT_X) return true;
+                }
+            }
+
+            int x;
+            for (int j = 0; j < SIZE; j++) {
+
+            if (map[x][j] == DOT_X) return true;
+            }
+
+            int y;
+            for (int i = 0; i < SIZE; i++) {
+
+            if (map[i][y] == DOT_X) return true;
+            }
+
+            */
         }
 
         public static boolean isMapFull() {
