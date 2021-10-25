@@ -5,9 +5,6 @@ import java.util.Scanner;
 
 
 
-    import java.util.Random;
-import java.util.Scanner;
-
     public class TicTacToe {
         public static int SIZE = 3;
         public static int DOTS_TO_WIN = 3;
@@ -79,7 +76,7 @@ import java.util.Scanner;
 
             if (map[i][y] == DOT_X) return true;
             }
-
+            return false;
             */
         }
 
