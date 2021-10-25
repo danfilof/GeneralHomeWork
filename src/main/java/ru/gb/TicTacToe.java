@@ -58,9 +58,9 @@ import java.util.Scanner;
             return false;
 
             /*
-            for (int i = 0; i < SIZE; i++) {
+            for (int i = 1; i < SIZE; i++) {
 
-                for (int j = 0; j < SIZE; j++) {
+                for (int j = 1; j < SIZE; j++) {
 
                    if (map[i][j] == DOT_X) return true;
 
@@ -69,13 +69,13 @@ import java.util.Scanner;
             }
 
             int x;
-            for (int j = 0; j < SIZE; j++) {
+            for (int j = 1; j < SIZE; j++) {
 
             if (map[x][j] == DOT_X) return true;
             }
 
             int y;
-            for (int i = 0; i < SIZE; i++) {
+            for (int i = 1; i < SIZE; i++) {
 
             if (map[i][y] == DOT_X) return true;
             }
