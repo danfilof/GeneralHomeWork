@@ -14,6 +14,10 @@ import java.util.Scanner;
         public static char[][] map;
         public static Scanner sc = new Scanner(System.in);
         public static Random rand = new Random();
+        public static int diagonalValue = 0;
+        public static int reverseDiagonalValue = 0;
+        public static int xAxisValue = 0;
+        public static int yAxisValue = 0;
 
         public static void main(String[] args) {
             initMap();
