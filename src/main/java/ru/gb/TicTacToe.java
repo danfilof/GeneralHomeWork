@@ -59,23 +59,53 @@ import java.util.Scanner;
 
                 for (int j = 1; j < SIZE; j++) {
 
-                   if (map[i][j] == DOT_X) return true;
+                   if (map[i][i] == DOT_X) {
 
-                   if (map[i][SIZE + 1 - j] == DOT_X) return true;
+                   diagonalValue = diagonalValue + 1;
+
+                   } if (map[i][map.length - 1 - i] == DOT_X) {
+
+                   reverseDiagonalValue = reverseDiagonalValue + 1;
+
+                   } if (map[i][i] = map[i][i + 1]) {
+
+                   xAxisValue = xAxisValue + 1;
+
+                   } if (map[i][i] == [i + 1][i]) {
+
+                   yAxisValue = yAxisValue + 1;
+
+                   }
                 }
             }
 
-            int x;
-            for (int j = 1; j < SIZE; j++) {
+            if ((diagonalValue | reverseDiagonalValue | xAxisValue | yAxisValue) == SIZE) return true;
 
-            if (map[x][j] == DOT_X) return true;
-            }
-
-            int y;
             for (int i = 1; i < SIZE; i++) {
 
-            if (map[i][y] == DOT_X) return true;
+                for (int j = 1; j < SIZE; j++) {
+
+                   if (map[i][i] == DOT_O) {
+
+                   diagonalValue = diagonalValue + 1;
+
+                   } if (map[i][map.length - 1 - i] == DOT_O) {
+
+                   reverseDiagonalValue = reverseDiagonalValue + 1;
+
+                   } if (map[i][i] = map[i][i + 1]) {
+
+                   xAxisValue = xAxisValue + 1;
+
+                   } if (map[i][i] == [i + 1][i]) {
+
+                   yAxisValue = yAxisValue + 1;
+
+                   }
+                }
             }
+            if ((diagonalValue | reverseDiagonalValue | xAxisValue | yAxisValue) == SIZE) return true;
+
             return false;
             */
         }
