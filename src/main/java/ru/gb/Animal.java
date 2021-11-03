@@ -18,16 +18,11 @@ class MainClass {
         dog1.swim();
         dog1.run();
 
-
-       // cat1.name = "Barsik";
-        System.out.println(cat1.getName());
-        //dog1.name = "Bobik";
-        System.out.println(dog1.getName());
     }
 }
 
 public class Animal {
-    private int distance = 199;
+    private int distance = -5;
     private String name;
     
     public Animal() {
@@ -93,7 +88,7 @@ class dog extends Animal {
     }
     @Override
     public void swim() {
-        if (getDistance() <= 10) {
+        if (getDistance() <= 10 && getDistance() >= 0 ) {
             System.out.println("Dog " + getName() + " проплыл " + getDistance() + " метров");
         } else if (getDistance() < 0) {
             System.out.println("Введите положительное значение");
